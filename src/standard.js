@@ -73,7 +73,7 @@ function emptySquares() {
 }
 
 function bestSpot() {
-    return emptySquares()[4];
+    return emptySquares()[1];
 }
 
 function checkTie() {
