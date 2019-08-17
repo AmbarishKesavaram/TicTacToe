@@ -1,3 +1,20 @@
+body {
+    box-sizing: border-box;
+}
+
+.d-flex input {
+    margin: .9em 0em;
+}
+
+.d-flex button {
+    margin: 1.5em .6em;
+    padding: .3em 2.4em;
+}
+
+.d-flex table {
+    margin: 1em 10em;
+}
+
 td {
     border: 2px solid#333;
     height: 100px;
@@ -8,13 +25,6 @@ td {
     font-size: 70px;
     cursor: pointer;
 
-}
-table { 
-    border-collapse: collapse;
-    position: absolute;
-    left: 50%;
-    margin-left: -155px;
-    top: 50px;
 }
 
 table tr:first-child td {
@@ -48,3 +58,14 @@ table tr td:last-child {
     font-size: 2em;
 
 }
+
+body {
+    background: #76b852; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+    background: -moz-linear-gradient(right, #76b852, #8DC26F);
+    background: -o-linear-gradient(right, #76b852, #8DC26F);
+    background: linear-gradient(to left, #76b852, #8DC26F);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
+  }
