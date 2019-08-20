@@ -95,7 +95,7 @@ function easy() {
 
 function standard() {
     var avail = emptySquares();
-    var random = avail[Math.floor(Math.random()*avail.length)];
+    var random = Math.floor(Math.random()*(avail.length-1));
 
     return emptySquares()[random];
 }
