@@ -53,13 +53,7 @@ table tr td:last-child {
     text-align: center;
     
 }
-.table .standard{
-    display: none;
-}
 
-.table .hard{
-    display: none;
-}
 
 .Endgame {
     display: none;
