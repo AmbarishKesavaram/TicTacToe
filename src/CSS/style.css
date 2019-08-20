@@ -27,6 +27,8 @@ td {
 
 }
 
+
+
 table tr:first-child td {
     border-top: 0;
 }
@@ -41,6 +43,22 @@ table tr td:first-child {
 
 table tr td:last-child {
     border-right: 0;
+}
+
+.table{
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 45px;
+    text-align: center;
+    
+}
+.table .standard{
+    display: none;
+}
+
+.table .hard{
+    display: none;
 }
 
 .Endgame {
