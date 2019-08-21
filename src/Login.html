@@ -12,24 +12,24 @@
     <div class="login-page">
         <div class="form">
             <form class="register-form">
-                <input type="text" placeholder="username"/>
-                <input type="password" placeholder="password"/>
-                <input type="text" placeholder="email address"/>
-                <button>create</button>
+                <input type="text" id="userName" placeholder="username"/>
+                <input type="password" id="password" placeholder="password"/>
+                <input type="text" id="email" placeholder="email address"/>
+                <button id="register">create</button>
                 <p class="message">Already registered?<a href="#">Sign In</a></p>
                 </form>
                 <form class="login-form">
-                    <input type="text" placeholder="username"/>
-                    <input type="password" placeholder="password"/>
-                    <button>login</button>
+                    <input type="text" id="userNameLogin" placeholder="username"/>
+                    <input type="password" id="passwordLogin" placeholder="password"/>
+                    <button id="login">login</button>
                     <p class="message">Not registered?<a href="#">create an account</a></p>
                  </form>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/2.0.4/dexie.min.js" integrity="sha256-ubffRsoh9QK5xJC/u3s3drtGFBZUHBm9bHFRzYvtkJI=" crossorigin="anonymous"></script>
+    <script src="./JavaScript/DataBase.js" type="module" ></script>   
     <script src="./JavaScript/Login.js"></script>   
-    <script src="./JavaScript/DataBase.js" type="Module" ></script>   
 
 </body>
 </html>
