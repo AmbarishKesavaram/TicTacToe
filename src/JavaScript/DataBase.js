@@ -1,37 +1,68 @@
 import userDB, {
-    insert
+    insert,
+    getData
 } from './Module.js';
 
-let db=userDB('userData',{
-    userDetails:'++id,userName,Password,EmailId'
+let db = userDB('userData', {
+    userDetails: '++id,userName,Password,EmailId'
 });
 
 
-    //input
+//input
 
-    const user = document.getElementById("userName");
-    const password = document.getElementById("password");
-    const email = document.getElementById("email");
+const user = document.getElementById("userName");
+const password = document.getElementById("password");
+const email = document.getElementById("email");
+const userNameLogin = document.getElementById("userNameLogin");
+const passwordLogin = document.getElementById("passwordLogin");
 
-    //buttons
-    const register = document.getElementById("register");
-    const login = document.getElementById("login");
+//buttons
+const register = document.getElementById("register");
+const login = document.getElementById("login");
 
 
-    register.onclick=(event)=>{
-        let flag=insert(db.userDetails,{
-            userName: user.value,
-            Password: password.value,
-            EmailId: email.value
-        })
-        user.value=password.value=email.value="";
-        getUser();
-    };
+register.onclick = (event) => {
+    let flag = insert(db.userDetails, {
+        userName: user.value,
+        Password: password.value,
+        EmailId: email.value
+    })
+    user.value = password.value = email.value = "";
 
-    const getUser = () => {
-        let i =0;
-        let obj={};
-        console.log(db.userDetails.userName)
+};
+
+login.onclick = (event) => {
+
+    getData(db.userDetails, data => {
+        if(data.userName == userNameLogin.value && data.password == passwordLogin.value)
+        {
+            console.log('aaaaa');
+            document.getElementById('error').style.display="hide";
+            location.href('src\index.html');
+            return;
         }
+
+        else{
+            document.getElementById('error').style.display="block";
+        }
+    });
+
+};
+
+
+/*
+      login.onclick=(event)=>{
+
+    getData(db.userDetails, data => {
+        let users = [];
+        users = data.userName
+        users.forEach(element => {
+            if(userNameLogin.value == element){
+                console.log(data);
+            }
+        });
+        console.log(users);
+      });
     
-               
+    };
+      */

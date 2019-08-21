@@ -33,7 +33,28 @@ const empty = object => {
     return flag;
   };
 
+
+  //
+  const getData = (dbname, fn) => {
+    let index = 0;
+    let obj = {};
+    dbname.count(count => {
+      // count rows in the table using count method
+      if (count) {
+        dbname.each(table => {
+          // table => return the table object data
+          
+          obj = table;
+          fn(obj, index++); // call function with data argument
+        });
+      } else {
+        fn(0);
+      }
+    });
+  };
+
 export default userDB;
 export {
-    insert
-}
+    insert,
+    getData
+};
